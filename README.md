@@ -1,2 +1,2 @@
 # Drills
-Coding drills
+Coding drills, challenges, katas, etc.
