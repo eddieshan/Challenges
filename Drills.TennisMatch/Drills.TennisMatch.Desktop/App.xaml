@@ -1,0 +1,9 @@
+﻿<Application x:Class="Drills.TennisMatch.Desktop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Drills.TennisMatch.Desktop"
+             StartupUri="TennisMatch.xaml">
+    <Application.Resources>
+        <ResourceDictionary Source="Theme.xaml" />
+    </Application.Resources>
+</Application>

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drills.TennisMatch.Component", "Drills.TennisMatch.Component\Drills.TennisMatch.Component.csproj", "{D0E27A2C-537F-4AE5-A19D-FC2D8C0F3CEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drills.TennisMatch.Core", "Drills.TennisMatch.Core\Drills.TennisMatch.Core.csproj", "{D082F123-703C-481A-AD6F-F7327DEC6F8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drills.TennisMatch.Component.Test", "Drills.TennisMatch.Component.Test\Drills.TennisMatch.Component.Test.csproj", "{A782BBA9-094B-4B06-8071-69F689C65C10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drills.TennisMatch.TestBench", "Drills.TennisMatch.TestBench\Drills.TennisMatch.TestBench.csproj", "{3CE0B080-62C9-4273-809E-5FC53C628274}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Drills.TennisMatch.Desktop", "Drills.TennisMatch.Desktop\Drills.TennisMatch.Desktop.csproj", "{F7521778-215D-422A-A7EF-C2EB045BB916}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6BB7E101-AC18-4EA9-AD55-69078F58C7E6}"
+	ProjectSection(SolutionItems) = preProject
+		DSEG-LICENSE.txt = DSEG-LICENSE.txt
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D0E27A2C-537F-4AE5-A19D-FC2D8C0F3CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0E27A2C-537F-4AE5-A19D-FC2D8C0F3CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0E27A2C-537F-4AE5-A19D-FC2D8C0F3CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0E27A2C-537F-4AE5-A19D-FC2D8C0F3CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D082F123-703C-481A-AD6F-F7327DEC6F8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D082F123-703C-481A-AD6F-F7327DEC6F8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D082F123-703C-481A-AD6F-F7327DEC6F8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D082F123-703C-481A-AD6F-F7327DEC6F8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A782BBA9-094B-4B06-8071-69F689C65C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A782BBA9-094B-4B06-8071-69F689C65C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A782BBA9-094B-4B06-8071-69F689C65C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A782BBA9-094B-4B06-8071-69F689C65C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CE0B080-62C9-4273-809E-5FC53C628274}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE0B080-62C9-4273-809E-5FC53C628274}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE0B080-62C9-4273-809E-5FC53C628274}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE0B080-62C9-4273-809E-5FC53C628274}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7521778-215D-422A-A7EF-C2EB045BB916}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7521778-215D-422A-A7EF-C2EB045BB916}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7521778-215D-422A-A7EF-C2EB045BB916}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7521778-215D-422A-A7EF-C2EB045BB916}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DB69E6AC-63B3-4E85-AEDD-CB07974D9402}
+	EndGlobalSection
+EndGlobal

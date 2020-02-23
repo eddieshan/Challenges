@@ -1,0 +1,130 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Drills.TennisMatch.Desktop"
+                    xmlns:controls="clr-namespace:Drills.TennisMatch.Desktop.Controls"
+                    xmlns:converters="clr-namespace:Drills.TennisMatch.Desktop.Converters">
+    
+    <Color x:Key="graphite">#424E51</Color>
+    <Color x:Key="blue">#1BA1E2</Color>
+    <Color x:Key="gold">#FFD700</Color>
+    <Color x:Key="white">#FFFFFF</Color>
+
+    <FontFamily x:Key="base-font">./Assets/DSEG14Classic-Regular.ttf#DSEG14 Classic</FontFamily>
+    <FontFamily x:Key="digits-font">./Assets/DSEG14Classic-Regular.ttf#DSEG14 Classic</FontFamily>
+
+    <SolidColorBrush x:Key="background" Color="Black" />
+    <SolidColorBrush x:Key="discrete" Color="{StaticResource graphite}" />
+    <SolidColorBrush x:Key="ContentText" Color="{StaticResource graphite}" />
+    <SolidColorBrush x:Key="highlight-accent" Color="{StaticResource gold}" />
+    <SolidColorBrush x:Key="light-accent" Color="DarkGray" />
+
+    <Style x:Key="DefaultWindow" TargetType="Window" BasedOn="{StaticResource ResourceKey={x:Type Window}}">
+        <Setter Property="Background"  Value="{StaticResource background}"/>
+        <Setter Property="FontFamily"  Value="{StaticResource base-font}"/>
+        <Setter Property="FontSize"  Value="12"/>
+    </Style>
+
+    <Style TargetType="Label" BasedOn="{StaticResource ResourceKey={x:Type Label}}">
+        <Setter Property="Background" Value="{StaticResource background}"/>
+        <Setter Property="Foreground" Value="{StaticResource discrete}"/>
+        <Setter Property="FontFamily" Value="{StaticResource base-font}"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Padding" Value="0"/>
+    </Style>
+
+    <Style x:Key="score-container" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Vertical" />
+        <Setter Property="Margin" Value="10" />
+    </Style>
+
+    <Style x:Key="players-container" TargetType="StackPanel" BasedOn="{StaticResource score-container}">
+        <Setter Property="Width" Value="100" />
+    </Style>
+
+    <Style x:Key="game-container" TargetType="StackPanel" BasedOn="{StaticResource score-container}">
+        <Setter Property="Width" Value="160" />
+    </Style>
+
+    <Style x:Key="set-container" TargetType="StackPanel" BasedOn="{StaticResource score-container}">
+        <Setter Property="Width" Value="90" />
+    </Style>
+
+    <Style x:Key="referee-container" TargetType="Border">
+        <Setter Property="BorderBrush" Value="{StaticResource discrete}" />
+        <Setter Property="BorderThickness" Value="0,2,0,0" />
+        <Setter Property="Padding" Value="0,30,0,0" />
+    </Style>
+
+    <Style x:Key="horizontal" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal" />
+    </Style>
+
+    <Style x:Key="score-label" TargetType="Label" BasedOn="{StaticResource ResourceKey={x:Type Label}}">
+        <Setter Property="FontSize" Value="50"/>
+        <Setter Property="Height" Value="80"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="FontFamily" Value="{StaticResource digits-font}"/>
+    </Style>
+
+    <Style x:Key="score-value" TargetType="Label" BasedOn="{StaticResource score-label}">
+        <Setter Property="FontSize" Value="50"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="FontFamily" Value="{StaticResource digits-font}"/>
+    </Style>
+
+    <Style x:Key="highlight-result" TargetType="Label" BasedOn="{StaticResource score-label}">
+        <Setter Property="Foreground" Value="{StaticResource highlight-accent}"/>
+    </Style>
+
+    <Style x:Key="live-value" TargetType="controls:AnimatedLabel" BasedOn="{StaticResource score-value}">
+        <Setter Property="Height" Value="80"/>
+        <Style.Triggers>
+            <EventTrigger RoutedEvent="ContentChanged">
+                <EventTrigger.Actions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.30" 
+                                            Storyboard.TargetProperty="Foreground.Color" 
+                                            From="{StaticResource gold}"
+                                            To="{StaticResource graphite}" AutoReverse="False" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger.Actions>
+            </EventTrigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style TargetType="Button">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Foreground" Value="{StaticResource discrete}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" 
+                            BorderThickness="1"
+                            Padding="2,2" 
+                            BorderBrush="{StaticResource light-accent}" 
+                            CornerRadius="0" 
+                            Background="{TemplateBinding Background}">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="White" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>                        
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- TODO: Move converter to a separate Utiliest resource dictionary-->
+    <converters:NegationConverter x:Key="negation-converter" />
+
+</ResourceDictionary>

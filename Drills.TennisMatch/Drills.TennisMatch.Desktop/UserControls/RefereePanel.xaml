@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Drills.TennisMatch.Desktop.UserControls.RefereePanel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Drills.TennisMatch.Desktop.UserControls"
+             mc:Ignorable="d">
+    <Border Style="{StaticResource referee-container}" VerticalAlignment="Bottom" HorizontalAlignment="Stretch">
+        <StackPanel Style="{StaticResource horizontal}" HorizontalAlignment="Center">
+            <Button Command="{Binding StartMatchCommand}" IsEnabled="{Binding IsLiveMatch, Converter={StaticResource negation-converter}}">New match</Button>
+            <Button Command="{Binding PointToP1Command}" IsEnabled="{Binding IsLiveMatch}">Point - P1</Button>
+            <Button Command="{Binding PointToP2Command}" IsEnabled="{Binding IsLiveMatch}">Point - P2</Button>
+        </StackPanel>
+    </Border>
+</UserControl>
