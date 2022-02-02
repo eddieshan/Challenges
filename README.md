@@ -2,7 +2,7 @@
 
 A collection of coding challenges,
 
-- [TennisMatch] (https://github.com/eddieshan/Drills/tree/master/Drills.TennisMatch).
+- [TennisMatch](https://github.com/eddieshan/Drills/tree/master/Drills.TennisMatch).
 
   Discussion and full implementation of the TennisMatch kata with C# and WPF.  
   Approached using Functional Programming patterns and modelling game state as a Finite State Machine.  
